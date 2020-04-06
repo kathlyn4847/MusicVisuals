@@ -1,6 +1,7 @@
 package example;
 
 import processing.core.*;
+import ie.tudublin.Visual;
 
 // This is an example of a visual that renders the waveform
 public class WaveForm
