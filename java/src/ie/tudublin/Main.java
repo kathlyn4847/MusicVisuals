@@ -1,32 +1,19 @@
 package ie.tudublin;
 
-import example.CubeVisual;
-import example.CubeVisual1;
-import example.WaveForm;
-import example.MyVisual;
-import example.AudioBandsVisual;
-import example.RotatingAudioBands;
+import c18359766.MusicProject;
 
 public class Main
 {	
 
-	public void startUI()
+	public void project()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new RotatingAudioBands());		
+        processing.core.PApplet.runSketch( a, new MusicProject());		
 	}
-
-	public void cubeVisual2()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new CubeVisual1());		
-	}
-
-
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.startUI();			
+		main.project();			
 	}
 }
