@@ -17,6 +17,17 @@ For this assignment we had to create a visual art piece of game that would repon
 I decided to do a visual art piece which was inspired by a particular piece of music. The music I chose was a song called Run Away From Me by DotEXE. This song has a happy memory linked to it in my head so that is why I chose this piece. Also as the song is drumstep it should respond well in a visual art piece form.
 
 # Instructions
+This was compiled and ran on MAC. 
+1. Run the code and it will be a blank black screen
+2. Using the number keys at the top of the keyboard you can select different visuals.
+3. The visuals are :
+	- 
+	-
+	- 
+	- 
+	- 
+	
+4. Hitting space will restart the song from the beginning.
 
 # How it works
 
