@@ -7,12 +7,16 @@ import ddf.minim.analysis.*;
 
 public class MusicProject extends Visual
 {	
-	Cubes wf;
-    WaveForm abv;
+	Wave wf;
+    Cubes cub;
+    RotatingBands bnds;
+
+    boolean cube = false;
+    boolean bands = false;
 
     public void settings()
     {
-        size(1024, 500);
+        size(1024, 500, P3D);
         
         // Use this to make fullscreen
         //fullScreen();
@@ -28,8 +32,9 @@ public class MusicProject extends Visual
         // Call loadAudio to load an audio file to process 
         loadAudio("RunAway.mp3");   
         
-        wf = new Cubes(this);
-        abv = new WaveForm(this);
+        wf = new Wave(this);
+        cub = new Cubes(this);
+        bnds = new RotatingBands(this);
     }
 
     public void keyPressed()
@@ -39,6 +44,17 @@ public class MusicProject extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
+        //key for bands
+        if (key == '1')
+        {
+            bands = ! bands;
+           
+        }
+        // //key for mandala
+        // if (key == '2')
+        // {
+        //     bands = ! bands;
+        // }
     }
 
     public void draw()
@@ -57,8 +73,18 @@ public class MusicProject extends Visual
         calculateFrequencyBands(); 
 
         // Call this is you want to get the average amplitude
-        calculateAverageAmplitude();        
+        calculateAverageAmplitude();  
+
         wf.render();
-        abv.render();
+
+        if (bands)
+        {
+            bnds.render();
+        }
+
+        // if (mandala)
+        // {
+       // man.render();
+        // }
     }
 }

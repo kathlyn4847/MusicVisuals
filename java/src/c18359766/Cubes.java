@@ -1,33 +1,30 @@
 package c18359766;
 
-import processing.core.*;
 import ie.tudublin.Visual;
+import processing.core.*;
 
-// This is an example of a visual that renders the waveform
+// This is a visual that uses the audio bands
 public class Cubes
 {
-    MusicProject mv;
-    float cy = 0;
-    float cz = 0;
+    MusicProject cubes;
+    float smoothedBoxSize = 0;
 
-    public Cubes(MusicProject mv)
+    public Cubes(MusicProject cubes)
     {
-        this.mv = mv;
-        cy = this.mv.height/4;
+        this.cubes = cubes; 
     }
 
     public void render()
     {
-        mv.colorMode(PApplet.HSB);
-        for(int i = 0 ; i < mv.getAudioBuffer().size() ; i ++)
-        {
-            mv.stroke(
-                PApplet.map(i, 0, mv.getAudioBuffer().size(), 0, 255)
-                , 255
-                , 255
-            );
+        cubes.colorMode(PApplet.HSB);
+        cubes.calculateAverageAmplitude();
+        cubes.background(0);
+        cubes.noFill();
+        cubes.stroke(PApplet.map(cubes.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        cubes.translate(0, 0, -250);
 
-            mv.line(i, cy, i, cy + cy * mv.getAudioBuffer().get(i));
-        }
+        float boxSize = 50 + (cubes.getAmplitude() * 300);//map(average, 0, 1, 100, 400); 
+        smoothedBoxSize = cubes.lerp(smoothedBoxSize, boxSize, 0.2f); 
+
     }
 }
