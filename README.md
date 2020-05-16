@@ -21,7 +21,7 @@ I decided to do a visual art piece which was inspired by a particular piece of m
 # How it works
 
 # What I am most proud of in the assignment
-From doing this assignment, I am proud of being able to sit down and read through code and begin to understand pieces of it. I find the amount of code sometimes to be overwhelming and therefore difficult to understand what piece does what. However, from looking through code and doing some self directed learning, I have gathered a bit more confidence when it comes to dealing with more complicated and code abundant tasks. 
+From doing this assignment, I am proud of being able to sit down and read through code and begin to understand pieces of it. I find the amount of code sometimes to be overwhelming and therefore difficult to understand what piece does what. However, from looking through code and doing some self directed learning, I have gathered a bit more confidence when it comes to dealing with more complicated and code abundant tasks. While I need to still focus on this and be able to apply it to my work the progress I felt I have made is something I am proud of.
 
 # Markdown Tutorial
 
