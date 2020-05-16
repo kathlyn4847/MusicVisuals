@@ -7,6 +7,7 @@ import processing.core.*;
 public class Cubes
 {
     MusicProject cubes;
+    float angle = 0;
     float smoothedBoxSize = 0;
 
     public Cubes(MusicProject cubes)
@@ -17,14 +18,51 @@ public class Cubes
     public void render()
     {
         cubes.colorMode(PApplet.HSB);
+
         cubes.calculateAverageAmplitude();
-        cubes.background(0);
         cubes.noFill();
+        cubes.lights();
         cubes.stroke(PApplet.map(cubes.getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
+        cubes.camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
         cubes.translate(0, 0, -250);
+               
+        float boxSize = 20 + (cubes.getAmplitude() * 300);//map(average, 0, 1, 100, 400); 
+        smoothedBoxSize = cubes.lerp(smoothedBoxSize, boxSize, 0.2f);        
 
-        float boxSize = 50 + (cubes.getAmplitude() * 300);//map(average, 0, 1, 100, 400); 
-        smoothedBoxSize = cubes.lerp(smoothedBoxSize, boxSize, 0.2f); 
+        cubes.pushMatrix();
+        cubes.translate(-250, -100, 0);
+        cubes.rotateY(angle);
+        cubes.rotateX(angle);
+        cubes.box(smoothedBoxSize);
+        cubes.strokeWeight(1);
+        //sphere(smoothedBoxSize);
+        cubes.popMatrix();
 
+
+        cubes.pushMatrix();
+        cubes.translate(250, 100, 0);
+        cubes.rotateX(angle);
+        cubes.rotateY(angle);
+        cubes.strokeWeight(5); 
+        cubes.box(smoothedBoxSize);
+        cubes.popMatrix();
+
+        cubes.pushMatrix();
+        cubes.translate(-250, 100, 0 );
+        cubes.rotateX(angle);
+        cubes.rotateY(angle);
+        cubes.strokeWeight(5); 
+        cubes.box(smoothedBoxSize);
+        cubes.popMatrix();
+        
+        cubes.pushMatrix();
+        cubes.translate(250, -100, 0 );
+        cubes.rotateY(angle);
+        cubes.rotateX(angle);
+        cubes.strokeWeight(5); 
+        cubes.box(smoothedBoxSize);
+        cubes.popMatrix();
+
+        angle += 0.01f;
     }
 }

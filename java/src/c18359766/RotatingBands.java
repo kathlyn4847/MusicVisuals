@@ -30,10 +30,10 @@ public class RotatingBands
             , 255
             , 255
         );
-        rotat.camera(0, -500, 500, 0, 0, 0, 0, 1, 0);
+        rotat.camera(0, -500, 800, 0, 0, 0, 0, 1, 0);
 
 
-        rot += rotat.getAmplitude() / 8.0f;
+        rot += rotat.getAmplitude() / 5.0f;
 
         rotat.rotateY(rot);
         float[] bands = rotat.getSmoothedBands();

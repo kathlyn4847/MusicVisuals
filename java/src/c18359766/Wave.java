@@ -27,7 +27,7 @@ public class Wave
                 , 255
             );
 
-            mv.line(i, cy, i, cy + cy * mv.getAudioBuffer().get(i));
+            mv.line(cz, cy, i, cy + cy * mv.getAudioBuffer().get(i));
         }
     }
 }

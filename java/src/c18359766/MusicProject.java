@@ -10,9 +10,14 @@ public class MusicProject extends Visual
 	Wave wf;
     Cubes cub;
     RotatingBands bnds;
+    Spheres sph;
+ 
 
     boolean cube = false;
     boolean bands = false;
+    boolean wave =false;
+    boolean sphere =false;
+
 
     public void settings()
     {
@@ -35,6 +40,8 @@ public class MusicProject extends Visual
         wf = new Wave(this);
         cub = new Cubes(this);
         bnds = new RotatingBands(this);
+        sph = new Spheres(this);
+
     }
 
     public void keyPressed()
@@ -44,17 +51,31 @@ public class MusicProject extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-        //key for bands
+
+        //key for wave
         if (key == '1')
+        {
+            wave = ! wave;
+        }
+
+        //key for bands
+        if (key == '2')
         {
             bands = ! bands;
            
         }
-        // //key for mandala
-        // if (key == '2')
-        // {
-        //     bands = ! bands;
-        // }
+
+        //key for cubes
+        if (key == '3')
+        {
+            cube = ! cube;
+        }
+
+        //key for spheres
+        if (key == '4')
+        {
+            sphere= ! sphere;
+        }
     }
 
     public void draw()
@@ -75,16 +96,26 @@ public class MusicProject extends Visual
         // Call this is you want to get the average amplitude
         calculateAverageAmplitude();  
 
-        wf.render();
+        if (wave)
+        {
+            wf.render();
+        }
 
         if (bands)
         {
             bnds.render();
         }
 
-        // if (mandala)
-        // {
-       // man.render();
-        // }
+        if (cube)
+        {
+            cub.render();
+        }
+
+        if (sphere)
+        {
+            sph.render();
+        }
+
+
     }
 }

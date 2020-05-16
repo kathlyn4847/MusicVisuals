@@ -139,4 +139,5 @@ public abstract class Visual extends PApplet
 	public AudioPlayer getAudioPlayer() {
 		return ap;
 	}
+
 }
