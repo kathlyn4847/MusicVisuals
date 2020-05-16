@@ -12,12 +12,16 @@ Student Number: C18359766
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+For this assignment we had to create a visual art piece of game that would repond to whatever music being played or have it be inspired by a particular type of music. The assignment was to follow the line given which was "Something beautiful to enjoy while listening to music".
+
+I decided to do a visual art piece which was inspired by a particular piece of music. The music I chose was a song called Run Away From Me by DotEXE. This song has a happy memory linked to it in my head so that is why I chose this piece. Also as the song is drumstep it should respond well in a visual art piece form.
 
 # Instructions
 
 # How it works
 
 # What I am most proud of in the assignment
+From doing this assignment, I am proud of being able to sit down and read through code and begin to understand pieces of it. I find the amount of code sometimes to be overwhelming and therefore difficult to understand what piece does what. However, from looking through code and doing some self directed learning, I have gathered a bit more confidence when it comes to dealing with more complicated and code abundant tasks. 
 
 # Markdown Tutorial
 
