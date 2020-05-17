@@ -21,84 +21,28 @@ This was compiled and ran on MAC.
 1. Run the code and it will be a blank black screen
 2. Using the number keys at the top of the keyboard you can select different visuals.
 3. The visuals are :
-	- 
-	-
-	- 
-	- 
-	- 
+	1. White line
+	2. Rotating Cubes
+	3. Two spheres
+	4. Large sphere with small sphere in centre 
+	5. White line, Rotating cubes and two spheres
 	
 4. Hitting space will restart the song from the beginning.
 
 # How it works
 
+The main file is MusicProject. This will call all the connected files such as Cubes, RotatingSpheres and other visual files needed. You call the viuals by using the number keys allowing them to be hidden or to be displayed. 
+
 # What I am most proud of in the assignment
-From doing this assignment, I am proud of being able to sit down and read through code and begin to understand pieces of it. I find the amount of code sometimes to be overwhelming and therefore difficult to understand what piece does what. However, from looking through code and doing some self directed learning, I have gathered a bit more confidence when it comes to dealing with more complicated and code abundant tasks. While I need to still focus on this and be able to apply it to my work the progress I felt I have made is something I am proud of.
+From doing this assignment, I am proud of being able to sit down and read through code and begin to understand pieces of it. I find the amount of code sometimes to be overwhelming and therefore difficult to understand what piece does what. However, from looking through code and doing some self directed learning in terms of understanding our code from class in more detail, I have gathered a bit more confidence when it comes to dealing with more complicated and code abundant tasks. While I need to still focus on this and be able to apply it to my work the progress I felt I have made is something I am proud of.I am happy with how my visual art piece turned out as I think it works wel with the song even with its simplicity.
+- It works well
+- The colours look nice
+- The song I think works well with this kind of project
+- I understand the code I used
+- The camera positioning worked as at first it excluded certain visuals after others had been displayed
 
-# Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
+# Link to my Youtube
+This is my youtube video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
 
