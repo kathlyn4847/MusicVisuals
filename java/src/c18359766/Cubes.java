@@ -35,7 +35,7 @@ public class Cubes
         cubes.rotateX(angle);
         cubes.box(smoothedBoxSize);
         cubes.strokeWeight(1);
-        //sphere(smoothedBoxSize);
+        cubes.box(smoothedBoxSize/3);
         cubes.popMatrix();
 
 
@@ -43,24 +43,27 @@ public class Cubes
         cubes.translate(250, 100, 0);
         cubes.rotateX(angle);
         cubes.rotateY(angle);
-        cubes.strokeWeight(5); 
         cubes.box(smoothedBoxSize);
+        cubes.strokeWeight(1); 
+        cubes.box(smoothedBoxSize/3);
         cubes.popMatrix();
 
         cubes.pushMatrix();
         cubes.translate(-250, 100, 0 );
         cubes.rotateX(angle);
         cubes.rotateY(angle);
-        cubes.strokeWeight(5); 
         cubes.box(smoothedBoxSize);
+        cubes.strokeWeight(1); 
+        cubes.box(smoothedBoxSize/3);
         cubes.popMatrix();
         
         cubes.pushMatrix();
         cubes.translate(250, -100, 0 );
         cubes.rotateY(angle);
         cubes.rotateX(angle);
-        cubes.strokeWeight(5); 
         cubes.box(smoothedBoxSize);
+        cubes.strokeWeight(1); 
+        cubes.box(smoothedBoxSize/3);
         cubes.popMatrix();
 
         angle += 0.01f;

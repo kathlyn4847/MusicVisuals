@@ -9,14 +9,14 @@ public class MusicProject extends Visual
 {	
 	Wave wf;
     Cubes cub;
-    RotatingBands bnds;
     Spheres sph;
+    RotatingSpheres rtsph;
  
 
     boolean cube = false;
-    boolean bands = false;
     boolean wave =false;
     boolean sphere =false;
+    boolean rotsphere = false;
 
 
     public void settings()
@@ -39,8 +39,8 @@ public class MusicProject extends Visual
         
         wf = new Wave(this);
         cub = new Cubes(this);
-        bnds = new RotatingBands(this);
         sph = new Spheres(this);
+        rtsph = new RotatingSpheres(this);
 
     }
 
@@ -61,20 +61,28 @@ public class MusicProject extends Visual
         //key for bands
         if (key == '2')
         {
-            bands = ! bands;
-           
-        }
-
-        //key for cubes
-        if (key == '3')
-        {
             cube = ! cube;
         }
 
         //key for spheres
-        if (key == '4')
+        if (key == '3')
         {
             sphere= ! sphere;
+        }
+
+        //key for rotatingspheres
+        if (key == '4')
+        {
+            rotsphere= ! rotsphere;
+        }
+
+        //key for multiple visuals
+        if (key == '5')
+        {
+            
+            cube= !cube;
+            sphere =!sphere;
+            wave =! wave;
         }
     }
 
@@ -101,11 +109,6 @@ public class MusicProject extends Visual
             wf.render();
         }
 
-        if (bands)
-        {
-            bnds.render();
-        }
-
         if (cube)
         {
             cub.render();
@@ -115,6 +118,12 @@ public class MusicProject extends Visual
         {
             sph.render();
         }
+
+        if (rotsphere)
+        {
+            rtsph.render();
+        }
+
 
 
     }

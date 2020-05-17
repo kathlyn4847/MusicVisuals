@@ -8,17 +8,16 @@ public class Wave
 {
     MusicProject mv;
     float cy = 0;
-    float cz = 0;
 
     public Wave(MusicProject mv)
     {
         this.mv = mv;
-        cy = this.mv.height/4;
+        cy = this.mv.height/6;
     }
 
     public void render()
     {
-        mv.colorMode(PApplet.HSB);
+        mv.colorMode(PApplet.HSB/2);
         for(int i = 0 ; i < mv.getAudioBuffer().size() ; i ++)
         {
             mv.stroke(
@@ -26,8 +25,9 @@ public class Wave
                 , 255
                 , 255
             );
-
-            mv.line(cz, cy, i, cy + cy * mv.getAudioBuffer().get(i));
+            mv.camera(0, -500, 800, 0, 0, 0, 0, 1, 0);
+            mv.line(-1300, cy, 10, cy + cy * mv.getAudioBuffer().get(i));
+            mv.line(1300, cy, -10, cy + cy * mv.getAudioBuffer().get(i));
         }
     }
 }
