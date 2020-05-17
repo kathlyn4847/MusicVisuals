@@ -44,5 +44,5 @@ From doing this assignment, I am proud of being able to sit down and read throug
 # Link to my Youtube
 This is my youtube video:
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube]](https://www.youtube.com/watch?v=JhEAhgDHL5E&feature=youtu.be)
 
